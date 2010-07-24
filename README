@@ -1,0 +1,25 @@
+Questo pacchetto contiene l'interprete per un semplice linguaggio
+imperativo, LITTLE. Ci sono inoltre degli esempi di programmazione in
+questo linguaggio e la documentazione completa, sia riguardo la
+definizione di LITTLE sia riguardo l'implementazione dell'interprete.
+
+Questo programma è stato sviluppato usando una tecnica conosciuta come
+Literate Programming (http://www.literateprogramming.com/). Il file
+sorgente principale è little.w; per estrarre i sorgenti C++, la
+documentazione e gli esempi da questo file è necessario avere il
+programma nuweb (http://nuweb.sourceforge.net/), che per comodità è incluso
+nell'archivio di LITTLE.
+
+Questa distribuzione di LITTLE contiene comunque la documentazione in
+formato PDF ed il sorgente C++ già estratti.
+
+Sono inoltre necessari un compilatore C++ per l'interprete ed un
+sistema LaTeX comprensivo dei comandi "latex", "dvips" e "ps2pdf" per
+la documentazione.
+
+La struttura delle directory ha il seguente significato:
+   * doc/          Directory che conterrà la documentazione
+   * src/          Directory che conterrà l'interprete
+   * examples/     Directory che conterrà gli esempi LITTLE
+   * pics/         Contiene le immagini usate nella documentazione
+   * nuweb/        Contiene il programma nuweb

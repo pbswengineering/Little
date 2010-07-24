@@ -1,0 +1,30 @@
+Per installare l'interprete LITTLE basta usare i seguenti comandi:
+
+    make install
+
+Probabilmente bisognerà avere i privilegi di root per copiare
+l'eseguibile nella directory di installazione predefinita
+(/usr/local/bin).
+
+Per scegliere una destinazione diversa da quella predefinita bisogna
+usare un comando simile a questo:
+
+    make install DEST=/la/mia/destinazione/personalizzata
+
+Questi comandi installano soltanto l'interprete. La documentazione e
+gli esempi rimangono nelle proprie directory (vedi il file README).
+
+Il comando "make" senza argomenti compila sia il programma che la
+documentazione ma NON installa nulla.
+
+Qualora si volessero compilare separatamente il programma e la
+documentazione si possono usare questi due comandi:
+
+    make prg
+
+e
+
+    make doc
+
+Gli esempi vengono creati dal comando "make prg" insieme
+all'interprete.
