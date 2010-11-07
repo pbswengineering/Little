@@ -23,6 +23,7 @@ doc/little.dvi: doc/little.tex pics/unipg.eps nuweb/nuweb
 	cd doc && latex little.tex
 
 doc/little.tex: little.w nuweb/nuweb
+	[ -d doc ] || mkdir doc
 	cd doc && ../nuweb/nuweb -o ../little.w
 
 prg: src/little
@@ -32,6 +33,8 @@ src/little: src/little.cpp
 	which strip > /dev/null 2>&1 && ( cd src && strip little ) || true
 
 src/little.cpp: little.w nuweb/nuweb
+	[ -d src ] || mkdir src 
+	[ -d examples ] || mkdir examples 
 	cd src && ../nuweb/nuweb -t ../little.w
 	mv src/*.lil examples
 	which indent > /dev/null 2>&1 && ( cd src && indent -kr -i8 little.cpp ) || true
@@ -58,6 +61,6 @@ pkg: clean doc src/little.cpp
 
 clean:
 	( cd nuweb && make clean && rm -f nuweb )
-	rm -f *~ doc/* src/* examples/* little.tar.bz2
+	rm -fr *~ doc/ src/ examples/ little.tar.bz2
 
 # That's all, folks!
